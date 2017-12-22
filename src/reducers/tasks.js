@@ -7,6 +7,8 @@ const tasks = (state = [], action) => {
       return [ ...state, action.task]
     case 'REMOVE_TASK':
       return state.filter (task => task.id != action.id)
+    case 'LOAD_TASKS':
+      return action.tasks
     default:
       return state
   }
